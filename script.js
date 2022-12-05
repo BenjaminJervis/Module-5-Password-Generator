@@ -111,16 +111,18 @@ function getPasswordOptions() {
         
     //If statement used to make sure the password is not less than 10 characters 
      if (passWordlength > 10 ); {
-        alert("Please be aware: All passwords must be between 10-64 characters."); //Alerts the user that password must be between 10-64 characters
+        alert("Please be aware: All passwords must be between 10-64 characters."); //The alert is used to alert the user that password must be between 10-64 characters
         prompt("How many characters do you want to be in your password?");
     
        }
-    upperChar = confirm("Click ok to confirm including upper case letters."); 
-    lowerChar = confirm("Click ok to confirgim including lower case letters."); 
-    numericChar = confirm("Click ok to confirm including numeric values."); 
-    specialChar = confirm("Click ok to confirm including special characters."); 
+    upperChar = prompt("Please choose a upper case letter."); 
+    lowerChar = prompt("Please choose a lower case letter."); 
+    numericChar = prompt("Please choose a number between 0-9"); 
+    specialChar = prompt("Please choose a special character"); 
     
-    if (upperChar === true) {  // Here I have used the .push method to add all user choices to the new password variable 
+//Here I have used a condition. I have used an If statement to say if the user enters correctly then add value to new password variable 
+
+    if (upperChar === true) {  // Here I have used the .push method to push all user choices to the new password variable 
         (newUserPassword.push(caps));
      }
       if (lowerChar === true) {
@@ -133,12 +135,13 @@ function getPasswordOptions() {
          (newUserPassword.push(special));
       }
      
-     var newPassWordstring = newUserPassword.join(""); //I have used .join to join all the characters entered together
-      
-     var password = "";
 
 
 }
+
+var newPassWordstring = newUserPassword.join(""); //I have used .join to join all the characters entered together
+      
+var password = "";
 
 getPasswordOptions()
 
