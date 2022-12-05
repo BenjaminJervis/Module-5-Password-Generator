@@ -149,15 +149,9 @@ getPasswordOptions()
 
 
 // Function for getting a random element from an array
-function getRandom(specialCharacters) {
-  for (i = 0; i < length; i++) 
-    var currentOption = options[Math.floor(Math.random() * options.length)];
-    var randomChar = currentOption.charAt(Math.floor(Math.random() * currentOption.length));
-    password += randomChar;
-    passwordArray.push(randomChar);
 
-}
-getRandom()
+
+
 
 
 
