@@ -95,7 +95,7 @@ var upperChar =["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P",
 var numericChar = ["0","1","2","3","4","5","6","7","8","9"];
 var specialChar = ["!","$","^","&","*","-",",","=","+","_","?"]
 
-//Variable created as an empty array to store the choices the user inputs 
+//I have created a new variable here as an empty array to store the choices the user inputs to make a new password 
 var newUserPassword = [];
 
 //---User options - This section gives the user different options ---//
@@ -111,8 +111,6 @@ function getPasswordOptions() {
         
     //If statement used to make sure the password is not less than 10 characters 
      if (passWordlength > 10 ); {
-        
-        prompt("How many characters do you want to be in your password? Choose between 10-64 characters");
     
        }
     upperChar = prompt("Please choose a upper case letter."); 
@@ -134,29 +132,21 @@ function getPasswordOptions() {
      if (specialChar = true) {
          (newUserPassword.push(special));
       }
-     
-
 
 }
 
-var newPassWordstring = newUserPassword.join(""); //I have used .join to join all the characters entered together
+//Function to get the password options 
+getPasswordOptions()
+
+var newPassWordstring = newUserPassword.join(""); //I have used .join to join all the characters entered above by the user together
       
 var password = "";
 
-getPasswordOptions()
+for (var i = 0; i < passWordlength; i++) { //This adds one to the password length each time the for loop runs 
+  var genChar = newPassWordstring.charAt(Math.floor(Math.random() * newPassWordstring.length)); //for loop used to get a random charcter from the above arrays 
+  password = password.concat(genChar); //here I have used concat to concatenate the characters entered by the user together 
 
-// write code to limit password length between 10-64 chars
-
-//create a variable here that stores user input from above arrays 
-// use the user input 
-
-
-// Function for getting a random element from an array
-
-
-
-
-
+}
 
 // Function to generate password with user input
 function generatePassword() {
