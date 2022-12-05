@@ -1,5 +1,5 @@
 // Array of special characters to be included in password
-var specialCharacters = [
+var specialChar = [
   '@',
   '%',
   '+',
@@ -26,10 +26,10 @@ var specialCharacters = [
 ];
 
 // Array of numeric characters to be included in password
-var numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+var numericChar = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
 // Array of lowercase characters to be included in password
-var lowerCasedCharacters = [
+var lowerChar = [
   'a',
   'b',
   'c',
@@ -59,7 +59,7 @@ var lowerCasedCharacters = [
 ];
 
 // Array of uppercase characters to be included in password
-var upperCasedCharacters = [
+var upperChar = [
   'A',
   'B',
   'C',
@@ -98,19 +98,19 @@ var specialChar = ["!","$","^","&","*","-",",","=","+","_","?"]
 //I have created a new variable here as an empty array to store the choices the user inputs to make a new password 
 var newUserPassword = [];
 
-//---User options - This section gives the user different options ---//
+//---User choices - This section gives the user different options to choose a password ---//
 
-//User choices - This allows the user to chose different options using prompts, if statements and confirms 
+//User choices - This allows the user to chose different options using prompts and if statements
 
 
 // Function to prompt user for password options
 
 function getPasswordOptions() {
  
-    var passWordlength =  parseInt(prompt("Please choose a password between 10 and 64 characters")); // I have used parseInt to parse a string and return a interger 
+var passWordLength =  parseInt(prompt("Please choose a password between 10 and 64 characters")); // I have used parseInt to parse a string and return a interger 
         
     //If statement used to make sure the password is not less than 10 characters 
-     if (passWordlength > 10 ); {
+     if (passWordLength > 10 ); {
     
        }
     upperChar = prompt("Please choose a upper case letter."); 
@@ -118,19 +118,19 @@ function getPasswordOptions() {
     numericChar = prompt("Please choose a number between 0-9"); 
     specialChar = prompt("Please choose a special character"); 
     
-//Here I have used a condition. I have used an If statement to say if the user enters correctly then add value to new password variable 
+//Here I have used a condition. I have used an If statement to say if the user enters correctly then add value to new password variable above 
 
-    if (upperChar === true) {  // Here I have used the .push method to push all user choices to the new password variable 
-        (newUserPassword.push(upper));
+    if (upperChar === true) {   
+        (newUserPassword.push(upperChar)); //Here I have used a condition. I have used an If statement to say if the user enters correctly then add value to new password variable above
      }
       if (lowerChar === true) {
-         (newUserPassword.push(lower));
+         (newUserPassword.push(lowerChar)); //Here I have used a condition. I have used an If statement to say if the user enters correctly then add value to new password variable above
       }
      if (numericChar === true) {
-         (newUserPassword.push(numeric));
+         (newUserPassword.push(numericChar));
       }
      if (specialChar = true) {
-         (newUserPassword.push(special));
+         (newUserPassword.push(specialChar));
       }
 
 }
@@ -140,17 +140,19 @@ getPasswordOptions()
 
 var newPassWordstring = newUserPassword.join(""); //I have used .join to join all the characters entered above by the user together
       
-var password = "";
+var newUserPassword = ""; //I have used the password variable as a blank string 
 
-for (var i = 0; i < passWordlength; i++) { //This adds one to the password length each time the for loop runs 
-  var genChar = newPassWordstring.charAt(Math.floor(Math.random() * newPassWordstring.length)); //for loop used to get a random charcter from the above arrays 
-  password = password.concat(genChar); //here I have used concat to concatenate the characters entered by the user together 
+for (var i = 0; i < passWordLength; i++) { //This adds one to the password length each time the for loop runs 
+  var genericChar = newPassWordstring.charAt(Math.floor(Math.random() * newPassWordstring.length)); //for loop used to get a random charcter from the above arrays 
+  newUserPassword = password.concat(genericChar); //here I have used .concat method to concatenate the characters entered by the user together 
 
 }
 
 // Function to generate password with user input
 function generatePassword() {
-  
+ alert ("click generate password button below to receive your new password"); //This reminds the user to click the button to view their password 
+ document.getElementById("passwordText").textContent = password;
+
 }
 
 // Get references to the #generate element
@@ -166,3 +168,13 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
+
+console.log(password);
+console.log(passWordLength);
+console.log(upperChar);
+console.log(lowerChar);
+console.log(numericChar);
+console.log(specialChar);
+console.log(newPassWord);
+console.log(newPassWordstring);
+console.log(genericChar);
