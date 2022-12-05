@@ -104,7 +104,8 @@ var newUserPassword = [];
 
 
 // Function to prompt user for password options
-//function getPasswordOptions() {
+
+function getPasswordOptions() {
  
     var passWordlength =  parseInt(prompt("Please choose a password between 10 and 64 characters"));
         
