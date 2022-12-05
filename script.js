@@ -98,7 +98,7 @@ var specialChar = ["!","$","^","&","*","-",",","=","+","_","?"]
 //Variable created as an empty array to store the choices the user inputs 
 var newUserPassword = [];
 
-                                //---User options---//
+//---User options - This section gives the user different options ---//
 
 //User choices - This allows the user to chose different options using prompts, if statements and confirms 
 
@@ -107,10 +107,11 @@ var newUserPassword = [];
 
 function getPasswordOptions() {
  
-    var passWordlength =  parseInt(prompt("Please choose a password between 10 and 64 characters"));
+    var passWordlength =  parseInt(prompt("Please choose a password between 10 and 64 characters")); // I have used parseInt to parse a string and return a interger 
         
+    //If statement used to make sure the password is not less than 10 characters 
      if (passWordlength > 10 ); {
-        alert("Please be aware: All passwords must be between 10-64 characters.");
+        alert("Please be aware: All passwords must be between 10-64 characters."); //Alerts the user that password must be between 10-64 characters
         prompt("How many characters do you want to be in your password?");
     
        }
