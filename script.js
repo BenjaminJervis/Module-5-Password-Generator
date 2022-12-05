@@ -111,8 +111,8 @@ function getPasswordOptions() {
         
     //If statement used to make sure the password is not less than 10 characters 
      if (passWordlength > 10 ); {
-        alert("Please be aware: All passwords must be between 10-64 characters."); //The alert is used to alert the user that password must be between 10-64 characters
-        prompt("How many characters do you want to be in your password?");
+        
+        prompt("How many characters do you want to be in your password? Choose between 10-64 characters");
     
        }
     upperChar = prompt("Please choose a upper case letter."); 
@@ -123,7 +123,7 @@ function getPasswordOptions() {
 //Here I have used a condition. I have used an If statement to say if the user enters correctly then add value to new password variable 
 
     if (upperChar === true) {  // Here I have used the .push method to push all user choices to the new password variable 
-        (newUserPassword.push(caps));
+        (newUserPassword.push(upper));
      }
       if (lowerChar === true) {
          (newUserPassword.push(lower));
