@@ -98,6 +98,8 @@ var specialCharArr = ["!","$","^","&","*","-",",","=","+","_","?"]
 //I have created a new variable here as an empty array to store the choices the user inputs to make a new user password 
 var newUserPassword = [];
 
+var password = "";
+
 //---User choices - This section gives the user different options to choose a password ---//
 
 //User choices - This allows the user to chose different options using prompts and if statements
@@ -117,7 +119,7 @@ passWordLength =  parseInt(prompt("Please choose a password between 10 and 64 ch
     //If statement used to make sure the password is not less than 10 characters and greater than 64 characters 
      if (passWordLength < 10 || passWordLength >64 ) {
       alert ("please choose between 10 and 64 characters")
-      return null; 
+      return; 
        }
     var upperChar = confirm ("Please click ok to add a upper case letter."); 
     var lowerChar = confirm ("Please click ok to add a lower case letter."); 
@@ -155,7 +157,6 @@ console.log(passWordLength) //prints the password length
 }
 // Function to generate password with user input
 function generatePassword() {
- alert ("click generate password button below to receive your new password"); //This alert reminds the user to click the button to view their password 
  document.getElementById("passwordText").textContent = password;
 
 }
