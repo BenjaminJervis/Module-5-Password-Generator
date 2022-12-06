@@ -139,17 +139,13 @@ console.log (newUserPassword)
 var chooseRandom = function () {
   return newUserPassword[Math.floor(Math.random() * newUserPassword.length)]
    
-
 }
-
-
 // Function to generate password with user input
 function generatePassword() {
 getPasswordOptions()
 for (var i=0; i<passWordLength; i++) {
   password+=chooseRandom()
 }
-
 
 }
 
@@ -167,12 +163,12 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
 
-// console.log(password);
+// I have commented these console logs out after testing 
+//console.log(password);        
 // console.log(passWordLength);
-// console.log(upperChar);
-// console.log(lowerChar);
-// console.log(numericChar);
-// console.log(specialChar);
-// console.log(newPassWord);
-// console.log(newPassWordstring);
-// console.log(genericChar);
+// console.log(Upper);
+// console.log(Lower);
+// console.log(Number);
+// console.log(special);
+// console.log(newUserPassWord);
+
