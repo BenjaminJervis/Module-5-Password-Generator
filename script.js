@@ -121,10 +121,10 @@ passWordLength =  parseInt(prompt("Please choose a password between 10 and 64 ch
       alert ("please choose between 10 and 64 characters")
       return; 
        }
-    var upperChar = confirm ("Please click ok to add a upper case letter."); 
-    var lowerChar = confirm ("Please click ok to add a lower case letter."); 
-    var numericChar = confirm ("Please click ok to add number between 0-9"); 
-    var specialChar = confirm ("Please click ok to add a special character"); 
+    var upperChar = confirm ("Please click ok to add an upper case letter to your password."); 
+    var lowerChar = confirm ("Please click ok to add a lower case letter to your password."); 
+    var numericChar = confirm ("Please click ok to add number between 0-9 to your password"); 
+    var specialChar = confirm ("Please click ok to add a special character to your password"); 
     
 //Here I have used a condition. I have used an If statement to say if the user enters correctly then add value to new password variable above 
 
@@ -160,8 +160,19 @@ function generatePassword() {
  document.getElementById("passwordText").textContent = password;
 
 }
+function generatePW() {
+  document.getElementById("passWordText").textContent = password;
+}
 
-// Get references to the #generate element
+
+/*function copyPassword (){
+var copyText = document.getElementById("passwordText")
+copyText.select("passwordText");
+document.execCommand ("copy")
+}
+*/
+
+//Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
 
 // Write password to the #password input
