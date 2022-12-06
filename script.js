@@ -85,9 +85,6 @@ var inputUpper = [
   'Z'
 ];
 
-//These are the variables I have created using the given arrays above 
-
-//var inputs = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","0","1","2","3","4","5","6","7","8","9","!","$","^","&","*","-",",","=","+","_","?"]
 
 //I have created a new variable here as an empty array to store the choices the user inputs to make a new user password 
 var newUserPassword = [];
@@ -98,12 +95,12 @@ var password = "";
 
 //User choices - This allows the user to chose different options using prompts and if statements
 
-//Global scope variable used here 
-// I have used parseInt to parse a string and return a interger 
-
 // Function to prompt user for password options
 
-var passWordLength;
+var passWordLength; //variable to store password length
+
+//Global scope variable used here 
+// I have used parseInt to parse a string and return a interger 
 
 function getPasswordOptions() {
 passWordLength =  parseInt(prompt("Please choose a password between 10 and 64 characters long"));
